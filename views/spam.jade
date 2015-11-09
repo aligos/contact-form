@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="post", action="spam/send")
+      .form-group
+        label(for="nama") Nama Anda
+        input#nama.form-control(type="text", name="name", placeholder="Nama Anda")
+      .form-group
+        label(for="email") Email Anda
+        input#email.form-control(type="email", name="email", placeholder="Email address")
+      .form-group
+        label(for="password") Password Email Anda
+        input#email.form-control(type="password", name="password", placeholder="Password Email address")
+      .form-group
+        label(for="pesan") Message
+        input#message.form-control(type="message", name="message", placeholder="Message Anda")
+      button.btn.btn-default(type="submit") Daftar
