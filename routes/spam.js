@@ -14,7 +14,7 @@ router.post('/send', function(req, res, next){
 	var transporter = nodemailer.createTransport(transport(options));
 		transporter.sendMail({
 		    from: req.body.email,
-		    to: 'artasikindonesia@gmail.com',
+		    to: 'yourgmail@gmail.com',
 		    subject: 'New Submission Express',
 		    text: 'pesan: '+req.body.message,
 		    html: '<p>You got new submission with the following details ..</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Pesan: '+req.body.message+'</li></ul>'
